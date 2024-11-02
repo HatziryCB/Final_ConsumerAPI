@@ -5,7 +5,7 @@ export default {
     name: 'ComponenteExamenFinal',
     data() {
         return {
-            picsumData: [], //Array para las imagenes
+            picsumData: [],
         };
     },
     mounted() {
@@ -26,9 +26,9 @@ export default {
 
 <template>
     <div class="container-sm">
-        <h2 class="text-center mt-4" style="background: linear-gradient(to bottom right, #000, #434343); color: #fff;">
-            Lista de imágenes de Picsum
-        </h2>
+        <h1 class="text-center mt-4">
+            LISTADO DE IMAGENES DE API
+        </h1>
 
         <div v-if="picsumData.length" class="row">
             <div v-for="image in picsumData" :key="image.id" class="col-md-4">
@@ -36,14 +36,14 @@ export default {
                     <img :src="image.download_url" class="card-img-top" :alt="`Imagen de ${image.author}`" />
                     <div class="card-body">
                         <h5 class="card-title">{{ image.author }}</h5>
-                        <a :href="image.download_url" target="_blank" class="btn btn-primary">Descargar imagen</a>
+                        <a :href="image.download_url" target="_blank" class="btn btn-sm btn-outline-info">Download</a>
                     </div>
                 </div>
             </div>
         </div>
 
         <div v-else>
-            <p>Cargando imágenes...</p>
+            <p>Cargando...</p>
         </div>
     </div>
 </template>

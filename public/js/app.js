@@ -5086,7 +5086,7 @@ function _asyncToGenerator(n) { return function () { var t = this, e = arguments
   name: 'ComponenteExamenFinal',
   data: function data() {
     return {
-      picsumData: [] //Array para las imagenes
+      picsumData: []
     };
   },
   mounted: function mounted() {
@@ -27603,17 +27603,9 @@ var render = function () {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "container-sm" }, [
-    _c(
-      "h2",
-      {
-        staticClass: "text-center mt-4",
-        staticStyle: {
-          background: "linear-gradient(to bottom right, #000, #434343)",
-          color: "#fff",
-        },
-      },
-      [_vm._v("\n        Lista de imágenes de Picsum\n    ")]
-    ),
+    _c("h1", { staticClass: "text-center mt-4" }, [
+      _vm._v("\n        LISTADO DE IMAGENES DE API\n    "),
+    ]),
     _vm._v(" "),
     _vm.picsumData.length
       ? _c(
@@ -27638,10 +27630,10 @@ var render = function () {
                   _c(
                     "a",
                     {
-                      staticClass: "btn btn-primary",
+                      staticClass: "btn btn-sm btn-outline-info",
                       attrs: { href: image.download_url, target: "_blank" },
                     },
-                    [_vm._v("Descargar imagen")]
+                    [_vm._v("Download")]
                   ),
                 ]),
               ]),
@@ -27649,7 +27641,7 @@ var render = function () {
           }),
           0
         )
-      : _c("div", [_c("p", [_vm._v("Cargando imágenes...")])]),
+      : _c("div", [_c("p", [_vm._v("Cargando...")])]),
   ])
 }
 var staticRenderFns = []
